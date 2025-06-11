@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>All About Rae</title>
-    <!-- Viewport tag for mobile scaling -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
@@ -40,8 +39,8 @@
             cursor: pointer;
             user-select: none;
             transition: background 0.3s;
-            width: 250px;
-            max-width: 90vw;
+            width: 90vw;       /* Responsive width */
+            max-width: 250px;  /* Max size for bigger screens */
             display: inline-block;
             position: relative;
             z-index: 10;
@@ -82,7 +81,6 @@
             opacity: 1;
             pointer-events: auto;
         }
-
         /* Animation for main bubble on page load */
         @keyframes slideDownFadeIn {
             to {
@@ -90,8 +88,7 @@
                 transform: translateY(0);
             }
         }
-
-        /* Mobile responsiveness */
+        /* Mobile tweaks */
         @media (max-width: 480px) {
             body {
                 padding: 30px 10px;
@@ -102,7 +99,6 @@
                 max-width: 100%;
             }
             button {
-                width: 100%;
                 font-size: 18px;
                 padding: 14px 10px;
                 margin: 10px 0 30px 0;
