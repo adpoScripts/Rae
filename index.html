@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>All About Rae</title>
+    <!-- Viewport tag for mobile scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -9,6 +11,7 @@
             background-color: #460000; /* Dark red */
             padding: 60px 20px;
             color: white;
+            margin: 0;
         }
         .container {
             max-width: 600px;
@@ -21,6 +24,7 @@
             opacity: 0;
             transform: translateY(-30px);
             animation: slideDownFadeIn 0.8s ease forwards;
+            box-sizing: border-box;
         }
         h1 {
             color: #460000;
@@ -41,6 +45,7 @@
             display: inline-block;
             position: relative;
             z-index: 10;
+            box-sizing: border-box;
         }
         button:hover {
             background: #0056b3;
@@ -57,6 +62,7 @@
             opacity: 0;
             pointer-events: none;
             transition: all 0.6s ease;
+            box-sizing: border-box;
         }
         /* Slide in from left */
         .slide-in-left {
@@ -82,6 +88,30 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 480px) {
+            body {
+                padding: 30px 10px;
+            }
+            .container, .bubble {
+                padding: 15px;
+                margin: 15px 10px;
+                max-width: 100%;
+            }
+            button {
+                width: 100%;
+                font-size: 18px;
+                padding: 14px 10px;
+                margin: 10px 0 30px 0;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
             }
         }
     </style>
