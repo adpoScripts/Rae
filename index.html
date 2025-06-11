@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All About Rae</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #460000; /* Dark red */
+            padding: 60px 20px;
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: slideDownFadeIn 0.8s ease forwards;
+        }
+        h1 {
+            color: #460000;
+        }
+        button {
+            margin: 15px 5px 40px 5px;
+            padding: 12px 25px;
+            font-size: 16px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.3s;
+            width: 250px;
+            max-width: 90vw;
+            display: inline-block;
+            position: relative;
+            z-index: 10;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .bubble {
+            max-width: 600px;
+            margin: 20px auto 0 auto;
+            background: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color: white;
+            position: relative;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.6s ease;
+        }
+        /* Slide in from left */
+        .slide-in-left {
+            transform: translateX(-100%);
+        }
+        .bubble.visible.slide-in-left {
+            transform: translateX(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+        /* Slide in from right */
+        .slide-in-right {
+            transform: translateX(100%);
+        }
+        .bubble.visible.slide-in-right {
+            transform: translateX(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Animation for main bubble on page load */
+        @keyframes slideDownFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container main-bubble">
+        <h1>For Rae.</h1>
+        <p>You are needed, you are wanted. You are so so kind and you mean so so much to me you actually have no idea. I've coded this entire website just for you, Rae.</p>
+    </div>
+
+    <button onclick="toggleBubble('bubble1')">Read this first</button>
+    <button onclick="toggleBubble('bubble2')">Why?</button>
+    <button onclick="toggleBubble('bubble3')">I mean this one</button>
+
+    <div id="bubble1" class="bubble slide-in-left">
+        <p>You are such a kind person and your so sweet always going out of your way to help me when i dont ask for it, thank you Rae.</p>
+    </div>
+
+    <div id="bubble2" class="bubble slide-in-right">
+        <p>I made this entire website all for you. Why? Cause i care about you, i worry about you and you mean so so much to me and you do so much for me so i figured that i should give you something in return.</p>
+    </div>
+
+    <div id="bubble3" class="bubble slide-in-left">
+        <p>no joke i nslyywatfmewidafiymssmtmaislybyckt</p>
+    </div>
+
+    <script>
+        function toggleBubble(id) {
+            const bubble = document.getElementById(id);
+            bubble.classList.toggle('visible');
+        }
+    </script>
+
+</body>
+</html>
